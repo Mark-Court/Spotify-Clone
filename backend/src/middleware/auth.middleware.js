@@ -22,6 +22,6 @@ export const requiredAdmin = async (req, res, next) => {
     }
     next();
   } catch (error) {
-    return res.status(500).json({ message: "Interal server error", error})
+    next(error);
   }
 };
