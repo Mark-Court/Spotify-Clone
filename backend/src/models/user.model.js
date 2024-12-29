@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema(
     clerkId: {
       type: String,
       required: true,
-      unique: ture,
+      unique: true,
     },
   },
   { timestamps: true }

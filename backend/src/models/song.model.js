@@ -4,28 +4,28 @@ const songSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     artist: {
       type: String,
-      required: true,
+      required: true
     },
     imageUrl: {
       type: String,
-      required: true,
+      required: true
     },
     audioUrl: {
       type: String,
-      required: true,
+      required: true
     },
     duration: {
       type: Number,
-      required: true,
+      required: true
     },
     albumId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Album",
-      required: false,
+      required: false
     },
   },
   { timestamps: true }
