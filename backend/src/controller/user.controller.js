@@ -1,3 +1,11 @@
-export const getUser = (req, res) => {
-    res.send('User route with GET method')
+import { User } from "../models/user.model.js";
+
+export const getAllUser = async (req, res, next) => {
+    try {
+        const currentUser = req.auth.userId;
+        const users = await User.find({ clerkId: { $ne: currentUser } });
+        res.status(200).json(users);
+    } catch (error) {
+        next(error);
+    }
 };
