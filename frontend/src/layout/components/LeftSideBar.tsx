@@ -68,12 +68,12 @@ const LeftSideBar = () => {
               albums.map((album) => (
                 <Link
                   key={album._id}
-                  to={`/playlist/${album._id}`}
+                  to={`/album/${album._id}`}
                   className="p-2 hover:bg-zinc-800 rounded-md flex items-center gap-3 group cursor-pointer"
                 >
                   <img
                     src={album.imageUrl}
-                    alt="Playlist img"
+                    alt="album img"
                     className="size-12 rounded-md flex-shrink-0 object-cover"
                   />
 
